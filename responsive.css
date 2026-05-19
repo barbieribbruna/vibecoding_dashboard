@@ -1,0 +1,150 @@
+/* ==========================================
+   RESPONSIVE DESIGN STYLESHEET
+   Targets: Mobile, Tablet, Notebook, Desktop, Ultra-wide
+   ========================================== */
+
+/* 1. ULTRA-WIDE / LARGER SCREENS (width >= 1600px) */
+@media (min-width: 1600px) {
+    :root {
+        font-size: 18px; /* Scales all rem-based sizes proportionally! */
+    }
+    .dashboard-container {
+        max-width: 95% !important;
+        padding: 3rem;
+    }
+    .chart-wrapper {
+        height: 285px;
+    }
+    .pomodoro-card {
+        min-width: 320px;
+    }
+}
+
+/* 2. LARGE DESKTOPS / NOTEBOOKS (width between 1200px and 1599px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    :root {
+        font-size: 16px;
+    }
+    .dashboard-container {
+        max-width: 95% !important;
+        padding: 2.5rem;
+    }
+}
+
+/* 3. LAPTOPS / NOTEBOOKS (width between 992px and 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    :root {
+        font-size: 15px;
+    }
+    .dashboard-container {
+        max-width: 95% !important;
+        padding: 2.2rem;
+    }
+}
+
+/* 4. TABLETS (width between 768px and 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    :root {
+        font-size: 14.5px;
+    }
+    .dashboard-container {
+        max-width: 96% !important;
+        padding: 2rem;
+    }
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .welcome-section {
+        gap: 1.5rem;
+    }
+}
+
+/* 5. MOBILE LANDSCAPE / LARGE MOBILE (width between 481px and 767px) */
+@media (max-width: 767px) {
+    :root {
+        font-size: 14px;
+    }
+    body {
+        padding: 1rem 0.5rem;
+    }
+    .dashboard-container {
+        padding: 1.5rem;
+        border-radius: 18px;
+        max-width: 100% !important;
+        width: 100%;
+        margin: 0;
+    }
+    .top-bar {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .welcome-section {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .welcome-title {
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+    }
+    .welcome-date {
+        text-align: center;
+    }
+    .pomodoro-card {
+        width: 100%;
+        min-width: unset;
+    }
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    .bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .card {
+        min-height: unset;
+        padding: 1.5rem;
+    }
+    .chart-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}
+
+/* 6. SMALL MOBILE (width <= 480px) */
+@media (max-width: 480px) {
+    :root {
+        font-size: 13.5px;
+    }
+    .top-bar {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+    .pomodoro-time {
+        font-size: 2rem;
+    }
+    .agenda-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    .agenda-badge {
+        align-self: flex-start;
+    }
+}
